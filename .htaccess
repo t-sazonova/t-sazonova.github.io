@@ -79,11 +79,6 @@
 # ######################################################################
 # # ERRORS                                                             #
 # ######################################################################
-
-# ----------------------------------------------------------------------
-# | Custom error messages/pages                                        |
-# ----------------------------------------------------------------------
-
 # Customize what Apache returns to the client in case of an error.
 #
 # https://httpd.apache.org/docs/current/mod/core.html#errordocument
@@ -338,15 +333,14 @@ AddDefaultCharset utf-8
 #     https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml
 #     https://tools.ietf.org/html/draft-ietf-acme-acme-12
 
-# <IfModule mod_rewrite.c>
-#    RewriteEngine On
-#    RewriteCond %{HTTPS} !=on
-#    # (1)
-#    # RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
-#    # RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[\w-]+$
-#    # RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
-#    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-# </IfModule>
+ <IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} !=on
+     RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
+     RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[\w-]+$
+     RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+ </IfModule>
 
 # ----------------------------------------------------------------------
 # | Suppressing the `www.` at the beginning of URLs                    |
@@ -450,9 +444,9 @@ AddDefaultCharset utf-8
 # https://blogs.msdn.microsoft.com/ieinternals/2010/03/30/combating-clickjacking-with-x-frame-options/
 # https://www.owasp.org/index.php/Clickjacking
 
-# <IfModule mod_headers.c>
-#     Header set X-Frame-Options "DENY" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
-# </IfModule>
+ <IfModule mod_headers.c>
+     Header set X-Frame-Options "DENY" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
+ </IfModule>
 
 # ----------------------------------------------------------------------
 # | Content Security Policy (CSP)                                      |
@@ -523,10 +517,9 @@ AddDefaultCharset utf-8
 # https://www.html5rocks.com/en/tutorials/security/content-security-policy/
 # https://www.w3.org/TR/CSP/
 
-# <IfModule mod_headers.c>
-#     #                                   (1)                 (2)              (3)                 (4)                     (5)
-#     Header set Content-Security-Policy "default-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
-# </IfModule>
+ <IfModule mod_headers.c>
+     Header set Content-Security-Policy "default-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
+ </IfModule>
 
 # ----------------------------------------------------------------------
 # | File access                                                        |
@@ -962,46 +955,46 @@ ServerSignature Off
 # order to keep default behavior regarding .gz files.
 # https://httpd.apache.org/docs/current/mod/mod_mime.html#removetype
 
-# <IfModule mod_headers.c>
+ <IfModule mod_headers.c>
 
-#     RewriteCond %{HTTP:Accept-Encoding} gzip
-#     RewriteCond %{REQUEST_FILENAME}\.gz -f
-#     RewriteRule \.(css|ics|js|json|html|svg)$ %{REQUEST_URI}.gz [L]
+     RewriteCond %{HTTP:Accept-Encoding} gzip
+     RewriteCond %{REQUEST_FILENAME}\.gz -f
+     RewriteRule \.(css|ics|js|json|html|svg)$ %{REQUEST_URI}.gz [L]
 
-#     # Prevent mod_deflate double gzip
-#     RewriteRule \.gz$ - [E=no-gzip:1]
+     # Prevent mod_deflate double gzip
+     RewriteRule \.gz$ - [E=no-gzip:1]
 
-#     <FilesMatch "\.gz$">
+     <FilesMatch "\.gz$">
 
-#         # Serve correct content types
-#         <IfModule mod_mime.c>
-#             # (1)
-#             RemoveType gz
+         # Serve correct content types
+         <IfModule mod_mime.c>
+             # (1)
+             RemoveType gz
 
-#             # Serve correct content types
-#             AddType text/css              css.gz
-#             AddType text/calendar         ics.gz
-#             AddType text/javascript       js.gz
-#             AddType application/json      json.gz
-#             AddType text/html             html.gz
-#             AddType image/svg+xml         svg.gz
+             # Serve correct content types
+             AddType text/css              css.gz
+             AddType text/calendar         ics.gz
+             AddType text/javascript       js.gz
+             AddType application/json      json.gz
+             AddType text/html             html.gz
+             AddType image/svg+xml         svg.gz
 
-#             # Serve correct content charset
-#             AddCharset utf-8 .css.gz \
-#                              .ics.gz \
-#                              .js.gz \
-#                              .json.gz
-#         </IfModule>
+             # Serve correct content charset
+             AddCharset utf-8 .css.gz \
+                              .ics.gz \
+                              .js.gz \
+                              .json.gz
+         </IfModule>
 
-#         # Force proxies to cache gzipped and non-gzipped files separately
-#         Header append Vary Accept-Encoding
+         # Force proxies to cache gzipped and non-gzipped files separately
+         Header append Vary Accept-Encoding
 
-#     </FilesMatch>
+     </FilesMatch>
 
-#     # Serve correct encoding type
-#     AddEncoding gzip .gz
+     # Serve correct encoding type
+     AddEncoding gzip .gz
 
-# </IfModule>
+ </IfModule>
 
 # ----------------------------------------------------------------------
 # | Content transformation                                             |
