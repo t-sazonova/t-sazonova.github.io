@@ -1,7 +1,18 @@
+* {
+    color: #fff;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url("../img/Фото1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
 .wrapper {
-    background-color: #b3d4fc;
-    min-width: 1000px;
-    max-width: 80%;
+    background-color: rgba(0, 0, 0, 0)!important;
+    max-width: 70%;
     height: 100vh;
     margin: auto;
     display: flex;
