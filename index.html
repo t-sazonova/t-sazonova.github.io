@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/62bd6fa838.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -47,10 +48,12 @@
 <div class="wrapper">
     <header>
         <h1 class="logo">Сазонова Татьяна</h1>
-        <div class="social vk">vk</div>
-        <div class="social telegram">tg</div>
-        <div class="social mailbox">yandex</div>
-        <div class="number">телефон</div>
+        <div class="social-button">
+            <div class="social vk"><i class="fab fa-vk"></i></div>
+            <div class="social telegram"><i class="fab fa-telegram-plane"></i></div>
+            <div class="social mailbox"><i class="fas fa-envelope"></i></div>
+            <div class="social number"><i class="fas fa-phone-alt"></i></div>
+        </div>
     </header>
     <main>
         <h2>Сайт в разработке</h2>
@@ -61,7 +64,12 @@
             ===О чем сайт, инфа о Тане===
         </p>
         <h2>Приглашение вернуться</h2>
-        <div class="counter">Обратный отсчет</div>
+        <div id="timer"> <!-- TODO адаптация под русский, кастомный дизайн -->
+            <div class="clock-segment" id="days"></div><p class="clock-title">days</p>
+            <div class="clock-segment" id="hours"></div><p class="clock-title">hours</p>
+            <div class="clock-segment" id="minutes"></div><p class="clock-title">minutes</p>
+            <div class="clock-segment" id="seconds"></div><p class="clock-title">seconds</p>
+        </div>
     </main>
 </div>
 <!-- TODO add to footer <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
