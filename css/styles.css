@@ -4,6 +4,7 @@
 }
 
 body {
+    background-color: #9e9f8f;
     background-image: url("../img/background-image.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -23,11 +24,40 @@ body {
     flex-flow: column nowrap;
 }
 
-header {
+header, .social-button {
     display: flex;
     flex-flow: row nowrap;
     align-items: baseline;
     justify-content: space-between;
+}
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.social {
+    padding: 5px;
+}
+#timer {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    /*align-self: center;*/
+    letter-spacing: -1px;
+}
+.clock-segment {
+    font-size: 60px;
+    color: #fff;
+    margin: 0 10px 0 25px;
+}
+.clock-segment:first-child {
+    margin-left: 0;
+}
+.clock-title {
+    margin: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #fff;
 }
 
 @media (max-width: 1050px) {
