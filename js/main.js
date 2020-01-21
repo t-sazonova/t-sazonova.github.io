@@ -24,12 +24,8 @@ function timeBetweenDates(toDate) {
         seconds %= 60;
 
         ruAdaptation(seconds, minutes, hours, days);
-
-        $("#days-segment").text(days);
-        $("#hours-segment").text(hours);
-        $("#minutes-segment").text(minutes);
-        $("#seconds-segment").text(seconds);
-/*        if (days !== 0) {
+        
+        if (days !== 0) {
             $("#days-segment").text(days);
         }
         if (hours !== 0) {
@@ -40,7 +36,7 @@ function timeBetweenDates(toDate) {
         }
         if (seconds !== 0) {
             $("#seconds-segment").text(seconds);
-        }*/
+        }
     }
 }
 
@@ -50,7 +46,9 @@ function ruAdaptation(seconds, minutes, hours, days) {
     let hoursLastSymbol = Number(hours.toString().slice(-1));
     let daysLastSymbol = Number(days.toString().slice(-1));
 
-    if (secondsLastSymbol === 1) {
+    if (seconds === 0) {
+        document.getElementById("seconds-title").hidden;
+    } else if (secondsLastSymbol === 1) {
         document.getElementById("seconds-title").innerHTML = "секунда";
     } else if ((secondsLastSymbol > 1) && (secondsLastSymbol <= 4)) {
         document.getElementById("seconds-title").innerHTML = "секунды";
@@ -58,7 +56,9 @@ function ruAdaptation(seconds, minutes, hours, days) {
         document.getElementById("seconds-title").innerHTML = "секунд";
     }
 
-    if (minutesLastSymbol === 1) {
+    if (minutes === 0) {
+        document.getElementById("minutes-title").hidden;
+    } else if (minutesLastSymbol === 1) {
         document.getElementById("minutes-title").innerHTML = "минута";
     } else if ((minutesLastSymbol > 1) && (minutesLastSymbol <= 4)) {
         document.getElementById("minutes-title").innerHTML = "минуты";
@@ -66,7 +66,9 @@ function ruAdaptation(seconds, minutes, hours, days) {
         document.getElementById("minutes-title").innerHTML = "минут";
     }
 
-    if (hoursLastSymbol === 1) {
+    if (hours === 0) {
+        document.getElementById("hours-title").hidden;
+    } else if (hoursLastSymbol === 1) {
         document.getElementById("hours-title").innerHTML = "час";
     } else if ((hoursLastSymbol > 1) && (hoursLastSymbol <= 4)) {
         document.getElementById("hours-title").innerHTML = "часа";
@@ -74,7 +76,9 @@ function ruAdaptation(seconds, minutes, hours, days) {
         document.getElementById("hours-title").innerHTML = "часов";
     }
 
-    if (daysLastSymbol === 1) {
+    if (days === 0) {
+        document.getElementById("days-title").hidden;
+    } else if (daysLastSymbol === 1) {
         document.getElementById("days-title").innerHTML = "день";
     } else if ((daysLastSymbol > 1) && (daysLastSymbol <= 4)) {
         document.getElementById("days-title").innerHTML = "дня";
