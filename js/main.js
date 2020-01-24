@@ -1,6 +1,4 @@
-const compareDate = new Date();
-compareDate.setDate(compareDate.getDate() + 1);
-
+const compareDate = new Date(2020,2,18,0,0,0,0); // Time of countdown
 const timer = setInterval(function() {
     timeBetweenDates(compareDate);
 }, 1000);
@@ -24,7 +22,7 @@ function timeBetweenDates(toDate) {
         seconds %= 60;
 
         ruAdaptation(seconds, minutes, hours, days);
-        
+
         if (days !== 0) {
             $("#days-segment").text(days);
         }
