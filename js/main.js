@@ -44,9 +44,7 @@ function ruAdaptation(seconds, minutes, hours, days) {
     let hoursLastSymbol = Number(hours.toString().slice(-1));
     let daysLastSymbol = Number(days.toString().slice(-1));
 
-    if (seconds === 0) {
-        document.getElementById("seconds-title").hidden;
-    } else if (secondsLastSymbol === 1) {
+    if (secondsLastSymbol === 1) {
         document.getElementById("seconds-title").innerHTML = "секунда";
     } else if ((secondsLastSymbol > 1) && (secondsLastSymbol <= 4)) {
         document.getElementById("seconds-title").innerHTML = "секунды";
@@ -54,9 +52,7 @@ function ruAdaptation(seconds, minutes, hours, days) {
         document.getElementById("seconds-title").innerHTML = "секунд";
     }
 
-    if (minutes === 0) {
-        document.getElementById("minutes-title").hidden;
-    } else if (minutesLastSymbol === 1) {
+    if (minutesLastSymbol === 1) {
         document.getElementById("minutes-title").innerHTML = "минута";
     } else if ((minutesLastSymbol > 1) && (minutesLastSymbol <= 4)) {
         document.getElementById("minutes-title").innerHTML = "минуты";
@@ -64,9 +60,7 @@ function ruAdaptation(seconds, minutes, hours, days) {
         document.getElementById("minutes-title").innerHTML = "минут";
     }
 
-    if (hours === 0) {
-        document.getElementById("hours-title").hidden;
-    } else if (hoursLastSymbol === 1) {
+    if (hoursLastSymbol === 1) {
         document.getElementById("hours-title").innerHTML = "час";
     } else if ((hoursLastSymbol > 1) && (hoursLastSymbol <= 4)) {
         document.getElementById("hours-title").innerHTML = "часа";
