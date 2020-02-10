@@ -26,15 +26,11 @@ function timeBetweenDates(toDate) {
         if (days !== 0) {
             $("#days-segment").text(days);
         }
-        if (hours !== 0) {
-            $("#hours-segment").text(hours);
-        }
-        if (minutes !== 0) {
-            $("#minutes-segment").text(minutes);
-        }
-        if (seconds !== 0) {
-            $("#seconds-segment").text(seconds);
-        }
+
+        $("#hours-segment").text(hours);
+        $("#minutes-segment").text(minutes);
+        $("#seconds-segment").text(seconds);
+
     }
 }
 
