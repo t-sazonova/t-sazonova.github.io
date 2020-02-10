@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700&display=swap&subset=cyrillic');
 
 * {
-    color: #fff;
     font-family: 'Open Sans', sans-serif;
 }
 h1, h2 {
     font-family: 'Roboto', sans-serif;
+}
+header, footer {
+    color: white;
 }
 body {
     background-color: #9e9f8f;
@@ -43,7 +45,7 @@ header, .social-button {
 }
 .logo {
     font-size: 2.3em;
-    margin: 0;
+    margin: 0 0 0 15px;
 }
 
 .number a {
@@ -54,15 +56,31 @@ main {
     flex-flow: column nowrap;
     align-items: center;
     padding: 5px;
+    color: #e9ebf9;
 }
 .about {
     text-align: justify-all;
+    margin: 0 0 2em;
 }
 .social {
-    margin: 5px;
+    font-size: 1.5em;
+}
+.social-button a {
+    color: inherit;
+}
+.social-button :not(:last-child) {
+    margin-right: 15px;
 }
 .social i {
     margin-right: 3px;
+}
+.comeback {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+h2.comeback {
+    margin-top: 0;
 }
 #timer {
     display: flex;
