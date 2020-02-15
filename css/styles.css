@@ -25,22 +25,37 @@ a {
 .wrapper {
     background-color: rgba(0, 0, 0, 0.6);
     -webkit-box-shadow: -5px 0 50px 0 rgba(123, 123, 123, 0.6), 5px 0 50px 0 rgba(123, 123, 123, 0.6);
-    -moz-box-shadow: -5px 0 50px 0 rgba(123, 123, 123, 0.6), 5px 0 50px 0 rgba(123, 123, 123, 0.6);
     box-shadow: -5px 0 50px 0 rgba(123, 123, 123, 0.6), 5px 0 50px 0 rgba(123, 123, 123, 0.6);
     max-width: 70%;
     height: 100vh;
     margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 header {
     padding: 5px;
 }
 header, .social-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
     align-items: baseline;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 .logo {
@@ -52,8 +67,15 @@ header, .social-button {
     color: white;
 }
 main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 5px;
     color: #e9ebf9;
@@ -98,8 +120,15 @@ h2.comeback {
     margin-top: 0;
 }
 #timer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     /*align-self: center;*/
     letter-spacing: -1px;
@@ -119,13 +148,19 @@ h2.comeback {
     color: #fff;
 }
 footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     max-height: 3em;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 5px;
 }
 .copy {
+    -ms-flex-item-align: end;
     align-self: flex-end;
 }
 @media (max-width: 1050px) {
@@ -133,13 +168,16 @@ footer {
         max-width: 100%;
         min-width: auto;
         -webkit-box-shadow: none;
-        -moz-box-shadow: none;
         box-shadow: none;
     }
 }
 @media (max-width: 650px) {
     header {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
 }
@@ -154,11 +192,16 @@ footer {
         max-height: 10em;
     }
     footer div, .copy {
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
         align-self: center;
     }
 }
 @media (max-width: 480px){
     #timer {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
         flex-flow: row wrap;
     }
     .clock-title {
