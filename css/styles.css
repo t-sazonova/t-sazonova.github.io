@@ -3,12 +3,15 @@
 * {
     font-family: 'Open Sans', sans-serif;
 }
+
 h1, h2 {
     font-family: 'Roboto', sans-serif;
 }
+
 header, footer {
     color: white;
 }
+
 body {
     background-color: #9e9f8f;
     background-image: url("../img/background-image.jpg");
@@ -18,12 +21,14 @@ body {
     background-size: cover;
     height: 100vh;
 }
+
 a {
     text-decoration: none;
     color: #969696;
 }
+
 .wrapper {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     -webkit-box-shadow: -5px 0 50px 0 rgba(123, 123, 123, 0.6), 5px 0 50px 0 rgba(123, 123, 123, 0.6);
     box-shadow: -5px 0 50px 0 rgba(123, 123, 123, 0.6), 5px 0 50px 0 rgba(123, 123, 123, 0.6);
     max-width: 70%;
@@ -40,9 +45,11 @@ a {
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
+
 header {
     padding: 5px;
 }
+
 header, .social-button {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -58,14 +65,16 @@ header, .social-button {
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
+
 .logo {
-    font-size: 2.3em;
+    font-size: 2.5em;
     margin: 0 0 0 15px;
 }
 
 .number a {
     color: white;
 }
+
 main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -80,45 +89,59 @@ main {
     padding: 5px;
     color: #e9ebf9;
 }
+
 .about {
     text-align: justify-all;
     margin: 0 0 2em;
+    font-size: 1.3em;
 }
+
 .social {
     font-size: 1.5em;
 }
+
 .social:hover {
     font-size: 1.7em;
 }
+
 .vk:hover {
     color: #5b88bd;
 }
+
 .telegram:hover {
     color: #2ca5e0;
 }
+
 .mailbox:hover {
     color: #ff0000;
 }
+
 .number:hover i {
     color: #1ebea5;
 }
+
 .social-button a {
     color: inherit;
 }
+
 .social-button :not(:last-child) {
     margin-right: 15px;
 }
+
 .social i {
     margin-right: 3px;
 }
+
 .comeback {
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
     text-align: center;
 }
+
 h2.comeback {
     margin-top: 0;
 }
+
 #timer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -133,20 +156,24 @@ h2.comeback {
     /*align-self: center;*/
     letter-spacing: -1px;
 }
+
 .clock-segment {
     font-size: 60px;
     color: #fff;
     margin: 0 10px 0 25px;
 }
+
 .clock-segment:first-child {
     margin-left: 0;
 }
+
 .clock-title {
     margin: 5px;
     font-family: Arial, sans-serif;
     font-size: 20px;
     color: #fff;
 }
+
 footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -159,19 +186,29 @@ footer {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 5px;
 }
+
+.footer-link:hover {
+    font-size: 1.1em;
+}
+
 .copy {
     -ms-flex-item-align: end;
     align-self: flex-end;
 }
-@media (max-width: 1050px) {
+
+/*
+TODO remake this stuff
+@media only screen and (max-width: 1050px) {
     .wrapper {
+        width: 100%;
         max-width: 100%;
         min-width: auto;
         -webkit-box-shadow: none;
         box-shadow: none;
     }
 }
-@media (max-width: 650px) {
+
+@media only screen and (max-width: 650px) {
     header {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -181,30 +218,42 @@ footer {
         align-items: center;
     }
 }
-@media (max-width: 580px){
+
+@media only screen and (max-width: 580px) {
     .clock-segment {
         font-size: 46px;
     }
+
     .clock-title {
         font-size: 18px;
     }
+
     footer {
         max-height: 10em;
     }
+
     footer div, .copy {
         -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
     }
 }
-@media (max-width: 480px){
+
+@media only screen and (max-width: 480px) {
     #timer {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
         flex-flow: row wrap;
     }
+
     .clock-title {
         margin: 3px;
     }
 }
+
+@media only screen and (max-height: 853px) and (max-width: 1300px) {
+    main {
+        font-size: .7em;
+    }
+}*/
