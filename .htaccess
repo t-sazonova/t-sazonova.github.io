@@ -21,9 +21,9 @@
 # https://enable-cors.org/
 # https://www.w3.org/TR/cors/
 
-# <IfModule mod_headers.c>
-#     Header set Access-Control-Allow-Origin "*"
-# </IfModule>
+ <IfModule mod_headers.c>
+     Header set Access-Control-Allow-Origin "*"
+ </IfModule>
 
 # ----------------------------------------------------------------------
 # | Cross-origin images                                                |
@@ -72,9 +72,9 @@
 # https://www.w3.org/TR/resource-timing/
 # https://www.stevesouders.com/blog/2014/08/21/resource-timing-practical-tips/
 
-# <IfModule mod_headers.c>
-#     Header set Timing-Allow-Origin: "*"
-# </IfModule>
+ <IfModule mod_headers.c>
+     Header set Timing-Allow-Origin: "*"
+ </IfModule>
 
 # ######################################################################
 # # ERRORS                                                             #
@@ -123,6 +123,10 @@ Options -MultiViews
 <IfModule mod_headers.c>
     Header set X-UA-Compatible "IE=edge" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
 </IfModule>
+
+<FilesMatch ".(eot|ttf|otf|woff)">
+	Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
 
 # ######################################################################
 # # MEDIA TYPES AND CHARACTER ENCODINGS                                #

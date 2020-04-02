@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700&display=swap&subset=cyrillic');
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+.fas, .fab, .fa {
+    font-family: fontawesome, monospace !important;
+    font-style: normal;
+}
 
 * {
     font-family: 'Open Sans', sans-serif;
@@ -11,6 +17,7 @@ h1, h2 {
 header, footer {
     color: white;
 }
+
 
 body {
     background-color: #9e9f8f;
@@ -98,6 +105,7 @@ main {
 
 .social {
     font-size: 1.5em;
+    font-family: fontawesome, monospace !important;
 }
 
 .social:hover {
@@ -113,10 +121,10 @@ main {
 }
 
 .mailbox:hover {
-    color: #ff0000;
+    color: #ffcc00;
 }
 
-.number:hover i {
+.number:hover {
     color: #1ebea5;
 }
 
@@ -182,7 +190,8 @@ footer {
     -webkit-box-direction: normal;
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
-    max-height: 3em;
+    height: 3em;
+    max-height: 4em;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 5px;
 }
@@ -196,64 +205,3 @@ footer {
     align-self: flex-end;
 }
 
-/*
-TODO remake this stuff
-@media only screen and (max-width: 1050px) {
-    .wrapper {
-        width: 100%;
-        max-width: 100%;
-        min-width: auto;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-    }
-}
-
-@media only screen and (max-width: 650px) {
-    header {
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-    }
-}
-
-@media only screen and (max-width: 580px) {
-    .clock-segment {
-        font-size: 46px;
-    }
-
-    .clock-title {
-        font-size: 18px;
-    }
-
-    footer {
-        max-height: 10em;
-    }
-
-    footer div, .copy {
-        -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    #timer {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
-    }
-
-    .clock-title {
-        margin: 3px;
-    }
-}
-
-@media only screen and (max-height: 853px) and (max-width: 1300px) {
-    main {
-        font-size: .7em;
-    }
-}*/

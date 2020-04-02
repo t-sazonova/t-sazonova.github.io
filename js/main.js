@@ -1,5 +1,5 @@
-const compareDate = new Date(2020,2,18,0,0,0,0); // Time of countdown
-const timer = setInterval(function() {
+const compareDate = new Date(2020, 2, 18, 0, 0, 0, 0); // Time of countdown
+const timer = setInterval(function () {
     timeBetweenDates(compareDate);
 }, 1000);
 
