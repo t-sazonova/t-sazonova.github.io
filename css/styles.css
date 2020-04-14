@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700&display=swap&subset=cyrillic');
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+.fas, .fab, .fa {
+    font-family: fontawesome, monospace !important;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+header, footer {
+    color: white;
+}
+
+
+body {
+    background-color: #9e9f8f;
+    background-image: url("../img/background-image.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #969696;
+}
+
+.wrapper {
+    background-color: rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: -5px 0 50px 0 rgba(123, 123, 123, 0.6), 5px 0 50px 0 rgba(123, 123, 123, 0.6);
+    box-shadow: -5px 0 50px 0 rgba(123, 123, 123, 0.6), 5px 0 50px 0 rgba(123, 123, 123, 0.6);
+    max-width: 70%;
+    height: 100vh;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+header {
+    padding: 5px;
+}
+
+header, .social-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 2.5em;
+    margin: 0 0 0 15px;
+}
+
+.number a {
+    color: white;
+}
+
+main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 5px;
+    color: #e9ebf9;
+}
+
+.about {
+    text-align: justify-all;
+    margin: 0 0 2em;
+    font-size: 1.3em;
+}
+
+.social {
+    font-size: 1.5em;
+    font-family: fontawesome, monospace !important;
+}
+
+.social:hover {
+    font-size: 1.7em;
+}
+
+.vk:hover {
+    color: #5b88bd;
+}
+
+.telegram:hover {
+    color: #2ca5e0;
+}
+
+.mailbox:hover {
+    color: #ffcc00;
+}
+
+.number:hover {
+    color: #1ebea5;
+}
+
+.social-button a {
+    color: inherit;
+}
+
+.social-button :not(:last-child) {
+    margin-right: 15px;
+}
+
+.social i {
+    margin-right: 3px;
+}
+
+.comeback {
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2.comeback {
+    margin-top: 0;
+}
+
+#timer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /*align-self: center;*/
+    letter-spacing: -1px;
+}
+
+.clock-segment {
+    font-size: 60px;
+    color: #fff;
+    margin: 0 10px 0 25px;
+}
+
+.clock-segment:first-child {
+    margin-left: 0;
+}
+
+.clock-title {
+    margin: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #fff;
+}
+
+footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+    height: 3em;
+    max-height: 4em;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px;
+}
+
+.footer-link:hover {
+    font-size: 1.1em;
+}
+
+.copy {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+
